@@ -1,5 +1,4 @@
 ﻿
-using ObjectOrientedPrograms;
 using System;
 
 namespace ObjectOrientedProgram
@@ -11,16 +10,23 @@ namespace ObjectOrientedProgram
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Welcome to Object Oriented Programs");
-                Console.WriteLine("Choose the Option : \n 1.JSON \n 2.Exit");
+                Console.WriteLine("Welcome to Object Oriented Program");
+                Console.WriteLine("Choose the Option : \n 1. JSON \n 2. Inventory Management \n 3. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
                         InventoryMain inv = new InventoryMain();
-                        inv.DisplayData(@"c:\users\dell\source\repos\objectorientedprograms\Files\Inventory.json");
+                        inv.DisplayData(@"C:\Users\DELL\source\repos\ObjectOrientedPrograms\Files\Inventory.json");
                         break;
                     case 2:
+                        InventoryManagementMain inven = new InventoryManagementMain();
+                        inven.ReadData(@"C:\Users\DELL\source\repos\ObjectOrientedPrograms\Files\InventoryList.json");
+                        inven.DisplayData("Rice");
+                        inven.DisplayData("Wheat");
+                        inven.DisplayData("Pulses");
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }

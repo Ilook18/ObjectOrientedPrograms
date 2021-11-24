@@ -1,12 +1,13 @@
 ﻿using Newtonsoft.Json;
+using ObjectOrientedPrograms;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace ObjectOrientedPrograms
+namespace ObjectOrientedProgram
 {
-    class InventoryMain
+    public class InventoryMain
     {
         public void DisplayData(string filepath)
         {
@@ -27,6 +28,11 @@ namespace ObjectOrientedPrograms
             {
                 Console.WriteLine(e.Message);
             }
+        }
+
+        internal void ReadData(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

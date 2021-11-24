@@ -27,6 +27,11 @@ namespace ObjectOrientedProgram
                         inven.DisplayData("Pulses");
                         break;
                     case 3:
+                        StockMain stock = new StockMain();
+                        Console.WriteLine("The Stock Report is : ");
+                        stock.DisplayData(@"C:\Users\DELL\source\repos\ObjectOrientedPrograms\Files\Stock.json");
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
